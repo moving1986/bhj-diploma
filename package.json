@@ -1,13 +1,13 @@
 {
   "name": "bhj-diploma",
   "version": "1.0.0",
-  "description": "",
+  "description": "Нажмите на изображение, чтобы посмотреть видео и описание:",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Alexei Mezentsev",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.5",

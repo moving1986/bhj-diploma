@@ -1,0 +1,405 @@
+{
+  "users": [
+    {
+      "name": "demo",
+      "email": "demo@demo",
+      "password": "demo",
+      "id": "1"
+    },
+    {
+      "name": "acsac",
+      "email": "admin@for-net.ru",
+      "password": "1",
+      "id": "48di7dqcm4tl589o"
+    },
+    {
+      "name": "Иван",
+      "email": "admin1@for-net.ru",
+      "password": "1",
+      "id": "48di7i6sm4tlvayq"
+    },
+    {
+      "name": "Геннадий",
+      "email": "admin@gena.ru",
+      "password": "1",
+      "id": "6l593sm4ttzk8c"
+    },
+    {
+      "name": "Мезенцев Алексей Сергеевич",
+      "email": "adm@mail.ru",
+      "password": "1",
+      "id": "6l5e4gm4z8o1tp"
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Банк",
+      "user_id": "1",
+      "id": "1"
+    },
+    {
+      "name": "Магазин",
+      "user_id": "1",
+      "id": "2"
+    },
+    {
+      "name": "Бизнес",
+      "user_id": "1",
+      "id": "3"
+    },
+    {
+      "name": "Корман",
+      "user_id": "6l593sm4ttzk8c",
+      "id": "6l52p0m4tu9w83"
+    },
+    {
+      "name": "Рублевый",
+      "user_id": "6l593sm4ttzk8c",
+      "id": "6l58e8m4tv57lv"
+    },
+    {
+      "name": "Сбер",
+      "user_id": "6l593sm4ttzk8c",
+      "id": "6l55k4m4tvbqf4"
+    },
+    {
+      "name": "ывмв",
+      "user_id": "6l593sm4ttzk8c",
+      "id": "6l5194m4tvjx02"
+    },
+    {
+      "name": "1000",
+      "user_id": "6l593sm4ttzk8c",
+      "id": "6l5ds4m4tvra5s"
+    },
+    {
+      "name": "123",
+      "user_id": "6l593sm4ttzk8c",
+      "id": "6l5354m4tvtupy"
+    },
+    {
+      "name": "2323",
+      "user_id": "6l593sm4ttzk8c",
+      "id": "6l52v8m4tvvgzk"
+    },
+    {
+      "name": "wfe",
+      "user_id": "6l593sm4ttzk8c",
+      "id": "6l52j0m4tvwux2"
+    },
+    {
+      "name": "На хлеб и кукуруззу",
+      "user_id": "6l593sm4ttzk8c",
+      "id": "6l533km4tvxcib"
+    },
+    {
+      "name": "Ванько",
+      "user_id": "48di7dqcm4tl589o",
+      "id": "48di7kngm4urtmqy"
+    },
+    {
+      "name": "Гавно",
+      "user_id": "6l5e4gm4z8o1tp",
+      "id": "6l594cm4z8o5m0"
+    }
+  ],
+  "transactions": [
+    {
+      "account_id": "1",
+      "created_at": "2019-09-15 10:24:02",
+      "id": "1",
+      "name": "Кредит",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-17 15:53:02",
+      "id": "2",
+      "name": "Баланс на дебетовке",
+      "sum": 3200,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-19 20:12:02",
+      "id": "3",
+      "name": "Копилка",
+      "sum": 1500,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 16:23:02",
+      "id": "4",
+      "name": "Молочные продукты",
+      "sum": 100,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "5",
+      "name": "Фрукты",
+      "sum": 250,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "17",
+      "name": "Овощи",
+      "sum": 300,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 14:47:02",
+      "id": "6",
+      "name": "Мясо",
+      "sum": 600,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-27 13:27:02",
+      "id": "7",
+      "name": "Долг в банк",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "9",
+      "name": "На банду",
+      "sum": 15000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-17 13:27:02",
+      "id": "10",
+      "name": "На стволы",
+      "sum": 6000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-12-27 13:27:02",
+      "id": "11",
+      "name": "Прибыль с банка",
+      "sum": 1500000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2018-01-15 13:27:02",
+      "id": "12",
+      "name": "Прибыль с магазина",
+      "sum": 300000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2018-01-15 13:27:02",
+      "id": "13",
+      "name": "Подарок сизого",
+      "sum": 20000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-15 13:27:02",
+      "id": "14",
+      "name": "На охрану",
+      "sum": 60000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "15",
+      "name": "На бумер",
+      "sum": 300000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "id": "48di7fwom4uyoxhi",
+      "type": "income",
+      "name": "Украл",
+      "sum": 5000,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T06:49:54.821Z"
+    },
+    {
+      "id": "48di7ezgm4uywpda",
+      "type": "expense",
+      "name": "Пропил",
+      "sum": 4999,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T06:55:57.549Z"
+    },
+    {
+      "id": "48di7d48m4uz1dn0",
+      "type": "income",
+      "name": "Опять украл",
+      "sum": 12000,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T06:59:35.627Z"
+    },
+    {
+      "id": "48di794m4uz29eb",
+      "type": "income",
+      "name": "ЗП",
+      "sum": 100,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:00:16.786Z"
+    },
+    {
+      "id": "48di7k7wm4uz4qf8",
+      "type": "expense",
+      "name": "Купил носки",
+      "sum": 30,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:12.163Z"
+    },
+    {
+      "id": "48di7b54m4uz4qxn",
+      "type": "expense",
+      "name": "Купил носки",
+      "sum": 30,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:12.826Z"
+    },
+    {
+      "id": "48di7lccm4uz4rcq",
+      "type": "expense",
+      "name": "Купил носки",
+      "sum": 30,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:13.369Z"
+    },
+    {
+      "id": "48di7lccm4uz4rd4",
+      "type": "expense",
+      "name": "Купил носки",
+      "sum": 30,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:13.384Z"
+    },
+    {
+      "id": "48di7iewm4uz4rxh",
+      "type": "expense",
+      "name": "Купил носки",
+      "sum": 30,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:14.116Z"
+    },
+    {
+      "id": "48di7fb8m4uz5ini",
+      "type": "expense",
+      "name": "Купил водяры",
+      "sum": 300,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:48.749Z"
+    },
+    {
+      "id": "48di7jwgm4uz5j6q",
+      "type": "expense",
+      "name": "Купил водяры",
+      "sum": 300,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:49.441Z"
+    },
+    {
+      "id": "48di7jwgm4uz5j75",
+      "type": "expense",
+      "name": "Купил водяры",
+      "sum": 300,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:49.457Z"
+    },
+    {
+      "id": "48di7fcm4uz5jnr",
+      "type": "expense",
+      "name": "Купил водяры",
+      "sum": 300,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:50.054Z"
+    },
+    {
+      "id": "48di7fcm4uz5jo4",
+      "type": "expense",
+      "name": "Купил водяры",
+      "sum": 300,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:50.069Z"
+    },
+    {
+      "id": "48di7fcm4uz5jof",
+      "type": "expense",
+      "name": "Купил водяры",
+      "sum": 300,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:50.079Z"
+    },
+    {
+      "id": "48di7fcm4uz5jor",
+      "type": "expense",
+      "name": "Купил водяры",
+      "sum": 300,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:02:50.091Z"
+    },
+    {
+      "id": "48di78rsm4uz6hfs",
+      "type": "income",
+      "name": "Подали",
+      "sum": 30,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:03:33.831Z"
+    },
+    {
+      "id": "48di74wwm4uz6ssh",
+      "type": "expense",
+      "name": "Опять пропил",
+      "sum": 6700,
+      "account_id": "48di7kngm4urtmqy",
+      "user_id": "48di7dqcm4tl589o",
+      "created_at": "2024-12-19T07:03:48.544Z"
+    }
+  ]
+}
