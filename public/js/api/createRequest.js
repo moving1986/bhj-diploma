@@ -2,31 +2,33 @@
  * Основная функция для совершения запросов
  * на сервер.
  * */
-const createRequest = (options = {}) => {
+ const createRequest = (options = {}) => {
   const xhr = new XMLHttpRequest();
   xhr.responseType = "json";
 
+  let url = options.url;
+  let requestData;
+
   if (options.method === "GET") {
-    let way = options.url + "?";
+    let queryParams = [];
     for (let key in options.data) {
-      way += `${key}=${options.data[key]}&`;
+      queryParams.push(`${encodeURIComponent(key)}=${encodeURIComponent(options.data[key])}`);
     }
-    way = way.slice(0, -1);
-
-    xhr.open("GET", way);
-    xhr.send();
+    if (queryParams.length > 0) {
+      url += "?" + queryParams.join("&");
+    }
   } else {
-    const formData = new FormData();
-    Object.entries(options.data).map(([key, value]) =>
-      formData.append(key, value)
-    );
-
-    xhr.open(options.method, options.url);
-    xhr.send(formData);
+    requestData = new FormData();
+    Object.entries(options.data).forEach(([key, value]) => {
+      requestData.append(key, value);
+    });
   }
-  xhr.addEventListener("readystatechange", () => {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      options.callback(null, xhr.response);
-    }
+
+  xhr.open(options.method, url);
+  
+  xhr.send(requestData || null);
+  
+  xhr.addEventListener("load", () => {
+    options.callback(null, xhr.response);
   });
 };

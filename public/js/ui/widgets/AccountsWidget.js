@@ -36,7 +36,9 @@ class AccountsWidget {
     });
     document.querySelector(".accounts-panel").addEventListener("click", (e) => {
       let account = e.target.closest(".account");
+      if(account) {
       this.onSelectAccount(account);
+      }
     });
   }
 
@@ -93,7 +95,7 @@ class AccountsWidget {
    * item - объект с данными о счёте
    * */
   getAccountHTML(item) {
-    return `<li class="active account" data-id="${item.id}">
+    return `<li class="account" data-id="${item.id}">
     <a href="#">
       <span>${item.name}</span>
       <span>${item.sum}</span>

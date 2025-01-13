@@ -41,10 +41,7 @@ class AsyncForm {
    * */
   getData() {
     const formData = new FormData(this.element);
-    return Array.from(formData.entries()).reduce((acc, [key, value]) => {
-        acc[key] = value;
-        return acc;
-    }, {});
+    return Object.fromEntries(formData.entries());
   }
 
   onSubmit(options) {

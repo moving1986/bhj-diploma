@@ -11,11 +11,14 @@ class LoginForm extends AsyncForm {
    * */
   onSubmit(data) {
     User.login(data, (err, response) => {
-      if (response.success) {          
+      if (!response.success) {     
+        throw new Error('Failed to autorization');
+      }
         App.setState('user-logged');        
-        document.querySelector('#login-form').reset();
         App.getModal('login').close();
-      }      
-    });    
+        this.element.reset();
+     }
+     
+     );    
   }
 }

@@ -20,19 +20,15 @@ class User {
    * пользователе из локального хранилища.
    * */
   static unsetCurrent() {
-    if (localStorage.user) {
-      localStorage.removeItem('user');
+        localStorage.removeItem('user');
     }
-  }
 
   /**
    * Возвращает текущего авторизованного пользователя
    * из локального хранилища
    * */
   static current() {
-    if (localStorage.user) {
-      return JSON.parse(localStorage.user);
-    }
+        return JSON.parse(localStorage.getItem('user'));
   }
 
   /**

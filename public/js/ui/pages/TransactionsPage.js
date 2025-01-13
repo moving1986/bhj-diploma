@@ -66,11 +66,13 @@ class TransactionsPage {
   removeAccount() {
     if (confirm("Вы хотите удалить счёт?")) {
       let idAcc = document.querySelector(".active").getAttribute("data-id");
-      console.log("Здесь 3" + idAcc);
-      Account.remove({ id: idAcc }, (err, response) => {});
-      this.clear();
-      App.updateWidgets();
-      App.updateForms();
+      Account.remove({ id: idAcc }, (err, response) => {
+        if (response.success) {
+          this.clear();
+          App.updateWidgets();
+          App.updateForms();
+        }
+      });
     }
   }
 
@@ -82,10 +84,13 @@ class TransactionsPage {
    * */
   removeTransaction(id) {
     if (confirm("Вы хотите удалить транзакцию?")) {
-      Transaction.remove({ id: id }, (err, response) => {});
-      this.update();
-      App.updateWidgets();
-      App.updateForms();
+      Transaction.remove({ id: id }, (err, response) => {
+      if (response.success) {
+        this.update();
+        App.updateWidgets();
+        App.updateForms();
+      }
+    });
     }
   }
 
@@ -95,25 +100,24 @@ class TransactionsPage {
    * Получает список Transaction.list и полученные данные передаёт
    * в TransactionsPage.renderTransactions()
    * */
-  render(options) {
+   render(options) {
     if (options) {
-      this.lastOptions = options;
-      Account.get(options.account_id, (err, response) => {
-        if (response.success) {
-          this.clear();
-          this.renderTitle(response.data.name);
-          Transaction.list(
-            { account_id: response.data.id },
-            (err, response) => {
-              if (response.success) {
-                this.renderTransactions(response.data);
-              }
+        this.lastOptions = options;
+
+        Account.get(options.account_id, (err, response) => {
+            if (response.success) {
+                this.clear();
+                this.renderTitle(response.data.name);
             }
-          );
-        }
-      });
+        });
+
+        Transaction.list({ account_id: options.account_id }, (err, response) => {
+            if (response.success) {
+                this.renderTransactions(response.data);
+            }
+        });
     }
-  }
+}
 
   /**
    * Очищает страницу. Вызывает
@@ -192,10 +196,13 @@ class TransactionsPage {
     const content = document.querySelector(".content");
     if (data.length == 0) {
       content.innerHTML = "";
-    } else {
-      for (let item of data) {
-        content.insertAdjacentHTML("beforeend", this.getTransactionHTML(item));
-      }
-    }
+      return;
+    } 
+    
+    const transactionsHTML = data.reduce((acc, item) => {
+      return acc + this.getTransactionHTML(item);
+    }, '');
+   
+    content.innerHTML = transactionsHTML;
   }
 }
