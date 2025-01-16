@@ -11,12 +11,11 @@ class TransactionsPage {
    * через registerEvents()
    * */
   constructor(element) {
-    if (element) {
-      this.element = element;
-      this.registerEvents();
-    } else {
+    if (!element) {
       throw new Error("не передан element");
-    }
+    } 
+    this.element = element;
+    this.registerEvents();
   }
 
   lastOptions = "";
@@ -82,15 +81,22 @@ class TransactionsPage {
    * По удалению транзакции вызовите метод App.update(),
    * либо обновляйте текущую страницу (метод update) и виджет со счетами
    * */
-  removeTransaction(id) {
+   removeTransaction(id) {
     if (confirm("Вы хотите удалить транзакцию?")) {
       Transaction.remove({ id: id }, (err, response) => {
-      if (response.success) {
-        this.update();
-        App.updateWidgets();
-        App.updateForms();
-      }
-    });
+        if (err) {
+          console.error("Ошибка при удалении транзакции:", err);
+          alert("Не удалось удалить транзакцию. Пожалуйста, попробуйте еще раз.");
+          return;
+        }
+        if (response.success) {
+          this.update();
+          App.updateWidgets();
+          App.updateForms();
+        } else {
+          alert("Не удалось удалить транзакцию. Проверьте данные и попробуйте снова.");
+        }
+      });
     }
   }
 
@@ -198,11 +204,6 @@ class TransactionsPage {
       content.innerHTML = "";
       return;
     } 
-    
-    const transactionsHTML = data.reduce((acc, item) => {
-      return acc + this.getTransactionHTML(item);
-    }, '');
-   
-    content.innerHTML = transactionsHTML;
+    content.innerHTML = data.reduce((acc, item) => acc + this.getTransactionHTML(item), '');
   }
 }

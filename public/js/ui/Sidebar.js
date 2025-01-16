@@ -38,8 +38,14 @@ class Sidebar {
     document.querySelector('.menu-item_login').addEventListener('click', () => App.getModal('login').open());
     document.querySelector('.menu-item_register').addEventListener('click', () => App.getModal('register').open());
     document.querySelector('.menu-item_logout').addEventListener('click', () => {
-      User.logout();
-      App.setState('init');
+      User.logout((err, response) => {
+        if (err) {
+          console.error('Logout error:', err);
+          return;
+        }
+       console.log('Successfully logged out:', response);
+       App.setState('init');
+      });
     }); 
   }
 }

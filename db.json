@@ -414,24 +414,6 @@
       "created_at": "2025-01-11T03:29:12.267Z"
     },
     {
-      "id": "6l55f8m5rmu62t",
-      "type": "expense",
-      "name": "Сигару купил",
-      "sum": 277,
-      "account_id": "6l52y0m5rmn00t",
-      "user_id": "6l5agcm5rmelf6",
-      "created_at": "2025-01-11T03:34:27.652Z"
-    },
-    {
-      "id": "6l5f7sm5rmy26m",
-      "type": "expense",
-      "name": "Пил",
-      "sum": 2000,
-      "account_id": "6l56cgm5rmezzq",
-      "user_id": "6l5agcm5rmelf6",
-      "created_at": "2025-01-11T03:37:29.229Z"
-    },
-    {
       "id": "6l5jkm5rp7ds0",
       "type": "expense",
       "name": "Бумага туалетная",
@@ -450,22 +432,22 @@
       "created_at": "2025-01-12T04:02:37.992Z"
     },
     {
-      "id": "6l53vgm5t3jfhr",
+      "id": "6l5f7gm5zbh67m",
       "type": "expense",
-      "name": "Пил",
-      "sum": 300000,
+      "name": "Коммунальные расходы",
+      "sum": 5600,
       "account_id": "6l52y0m5rmn00t",
       "user_id": "6l5agcm5rmelf6",
-      "created_at": "2025-01-12T04:09:46.286Z"
+      "created_at": "2025-01-16T12:38:34.929Z"
     },
     {
-      "id": "6l55lcm5t9chhy",
+      "id": "6l5124m5zbl9bz",
       "type": "expense",
-      "name": "Пропил",
-      "sum": 3000,
+      "name": "Выиграл в лотерею",
+      "sum": 10000,
       "account_id": "6l56cgm5rmezzq",
       "user_id": "6l5agcm5rmelf6",
-      "created_at": "2025-01-12T06:52:19.989Z"
+      "created_at": "2025-01-16T12:41:45.598Z"
     }
   ]
 }
